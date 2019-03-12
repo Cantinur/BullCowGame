@@ -45,7 +45,6 @@ void PlayGame()
 {
 	FText UserGuess;
 	
-	
 	do {
 		UserGuess = GetValidGuess();
 		FBullCowCount BullCowCount = BCGame.SubmitValidGuess(UserGuess);
@@ -85,7 +84,6 @@ FText GetValidGuess()
 				
 			default:
 				//Assuming the guess is valid
-				
 				break;
 		}
 		std::cout << std::endl;

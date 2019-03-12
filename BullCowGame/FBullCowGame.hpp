@@ -43,4 +43,5 @@ private :
 	FString MyHiddenWord;
 	bool bGameIsWon;
 	bool IsIsogram(FString word);
+	bool isLowercase(FString word);
 };

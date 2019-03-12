@@ -33,7 +33,7 @@ EWordStatus FBullCowGame:: CheckGuessValidity(FString Guess) {
 	if (!IsIsogram(Guess))
 		return EWordStatus:: Not_Isogram;
 	
-	else if (false)  //TODO:- Wirte function for not lowercase
+	else if (!isLowercase(Guess))
 		return EWordStatus:: Not_lowercase;
 	
 	else if (Guess.length() != GetHidenWordLength())
@@ -49,6 +49,15 @@ bool FBullCowGame:: IsIsogram(FString word)
 	for (int i = 1; i < word.size(); i++)
 		if (word[i] == word[i-1])
 			return false;
+	return true;
+}
+
+bool FBullCowGame:: isLowercase(FString word)
+{
+	for (int i = 0; i < word.length(); i++)
+		if ((int) word[i] < 97)
+			return false;
+
 	return true;
 }
 
